@@ -82,6 +82,26 @@
 .text-display-hero-mobile {
   font-size: 36px;
   line-height: 44px;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+.text-headline-lg-mobile {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 500;
+}
+
+.text-headline-md {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 500;
+}
+
+.text-headline-sm {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 600;
 }
 
 .text-body-lg {
@@ -103,6 +123,22 @@
 .text-caption {
   font-size: 12px;
   line-height: 18px;
+}
+
+@media (min-width: 768px) {
+  .md\:text-display-hero {
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+
+  .md\:text-headline-lg {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.01em;
+    font-weight: 500;
+  }
 }
 
 .px-gutter {
