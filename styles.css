@@ -1,0 +1,168 @@
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.bg-background,
+.bg-surface,
+.bg-surface-bright {
+  background-color: #fff8f5;
+}
+
+.bg-surface-container-lowest {
+  background-color: #ffffff;
+}
+
+.bg-surface-container-low {
+  background-color: #fff1e8;
+}
+
+.bg-surface-container,
+.bg-surface-container-high {
+  background-color: #fbebdf;
+}
+
+.bg-primary {
+  background-color: #283823;
+}
+
+.bg-primary-container {
+  background-color: #3e4f38;
+}
+
+.text-primary {
+  color: #283823;
+}
+
+.text-on-primary {
+  color: #ffffff;
+}
+
+.text-secondary {
+  color: #8c4f25;
+}
+
+.text-on-surface,
+.text-on-background {
+  color: #221a13;
+}
+
+.text-on-surface-variant {
+  color: #444841;
+}
+
+.font-display-hero,
+.font-display-hero-mobile,
+.font-headline-lg,
+.font-headline-lg-mobile,
+.font-headline-md,
+.font-headline-sm {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.font-body-md,
+.font-body-lg,
+.font-label-lg,
+.font-label-sm,
+.font-caption {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.text-display-hero {
+  font-size: 56px;
+  line-height: 64px;
+}
+
+.text-display-hero-mobile {
+  font-size: 36px;
+  line-height: 44px;
+}
+
+.text-body-lg {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.text-body-md {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.text-label-lg {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.text-label-sm,
+.text-caption {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.px-gutter {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.px-gutter-mobile {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.gap-space-xs {
+  gap: 0.25rem;
+}
+
+.gap-space-md {
+  gap: 1rem;
+}
+
+.gap-space-lg {
+  gap: 1.5rem;
+}
+
+.px-space-lg {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-space-sm {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+@media (max-width: 767px) {
+  .md\:px-gutter {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.modal-overlay:not(.hidden) {
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 76px;
+  }
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: #fbebdf;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #c4c8be;
+  border-radius: 9999px;
+}
