@@ -1,6 +1,4 @@
 let currentIntent = "menginap";
-const TIKET_URL =
-  "https://www.tiket.com/id-id/homes/indonesia/ngadem-di-sawah-906001780628421521";
 const WHATSAPP_NUMBER = "6281228171970";
 
 const roomData = {
@@ -38,13 +36,10 @@ const roomData = {
   },
 };
 
-function openModal(intent = "menginap") {
-  if (intent === "menginap") {
-    window.open(TIKET_URL, "_blank", "noopener,noreferrer");
-    return;
-  }
+function openModal(intent = "menginap", roomName = "") {
   document.getElementById("reservation-modal").classList.remove("hidden");
   switchModalTab(intent);
+  if (roomName) document.getElementById("res-room").value = roomName;
   document.body.style.overflow = "hidden";
 }
 
@@ -70,7 +65,7 @@ function switchModalTab(intent) {
   const activeClass =
     "py-2 rounded-full font-semibold bg-surface-container-lowest text-primary shadow-xs transition-all";
 
-  if (stayFields) stayFields.classList.add("hidden");
+  if (stayFields) stayFields.classList.toggle("hidden", intent !== "menginap");
   diningFields.classList.toggle("hidden", intent !== "makan");
   eventFields.classList.toggle("hidden", intent !== "acara");
   document.getElementById(`tab-btn-${intent}`).className = activeClass;
@@ -91,21 +86,6 @@ function closeRoomDetailModal() {
   document.body.style.overflow = "auto";
 }
 
-function handleQuickSearch(event) {
-  event.preventDefault();
-  const dateValue = document.getElementById("quick-date").value;
-  const intentValue = document.getElementById("quick-intent").value;
-  const guestsValue = document.getElementById("quick-guests").value;
-  if (intentValue === "menginap") {
-    window.open(TIKET_URL, "_blank", "noopener,noreferrer");
-    return;
-  }
-  openModal(intentValue);
-  document.getElementById("res-guests").value = guestsValue;
-  document.getElementById("res-notes").value =
-    `Hasil pencarian cepat untuk tanggal: ${dateValue}`;
-}
-
 function handleReservationSubmit(event) {
   event.preventDefault();
   const name = document.getElementById("res-name").value || "Tamu";
@@ -114,7 +94,14 @@ function handleReservationSubmit(event) {
   const notes = document.getElementById("res-notes").value || "-";
   let message = "";
 
-  if (currentIntent === "makan") {
+  if (currentIntent === "menginap") {
+    const room = document.getElementById("res-room").value;
+    const checkin =
+      document.getElementById("res-checkin").value || "menyesuaikan";
+    const checkout =
+      document.getElementById("res-checkout").value || "menyesuaikan";
+    message = `Halo Ngadem di Sawah, saya ingin menanyakan ketersediaan kamar ${room} untuk tanggal ${checkin} sampai ${checkout}, untuk ${guests} orang. Nama saya ${name}.`;
+  } else if (currentIntent === "makan") {
     const dateDining =
       document.getElementById("res-date-dining").value || "Hari ini/Besok";
     const timeDining = document.getElementById("res-time-dining").value;
