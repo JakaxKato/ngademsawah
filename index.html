@@ -147,8 +147,15 @@
                 >
                 <span>Lihat Pilihan Kamar</span>
               </a>
-              <a
+              <button
                 class="border border-secondary text-secondary hover:bg-secondary/10 font-label-lg text-label-lg px-space-lg py-3 rounded-full transition-all active:scale-[0.98] flex items-center gap-2"
+                onclick="openCatalogModal(1)"
+              >
+                <span class="material-symbols-outlined text-[18px]" data-icon="menu_book">menu_book</span>
+                <span>Buka E-Katalog Resmi</span>
+              </button>
+              <a
+                class="text-on-surface-variant hover:text-primary font-label-lg text-label-lg px-space-lg py-3 rounded-full transition-all flex items-center gap-2"
                 href="https://wa.me/6281228171970?text=Halo%20Ngadem%20di%20Sawah,%20saya%20ingin%20bertanya%20tentang%20penginapan%20dan%20fasilitasnya."
                 rel="noopener noreferrer"
                 target="_blank"
@@ -158,12 +165,7 @@
                   data-icon="chat"
                   >chat</span
                 >
-                <span>Reservasi via WhatsApp</span>
-                <span
-                  class="material-symbols-outlined text-[18px]"
-                  data-icon="arrow_outward"
-                  >arrow_outward</span
-                >
+                <span>Chat Admin</span>
               </a>
             </div>
             <p
@@ -304,7 +306,7 @@
         </div>
       </section>
       <!-- 4. Experience Section (Editorial Asymmetric Composition) -->
-      <section class="py-20 md:py-28" id="pengalaman">
+      <section class="py-20 md:py-28" id="aktivitas">
         <div class="max-w-7xl mx-auto px-gutter-mobile md:px-gutter">
           <div
             class="flex flex-col md:flex-row md:items-end justify-between mb-12"
@@ -387,7 +389,7 @@
             <!-- Experience 2: Makanan Liwet & Tampah (Span 5) -->
             <div
               class="md:col-span-5 bg-surface-container-lowest border border-outline-variant/50 rounded-2xl overflow-hidden flex flex-col justify-between group"
-              id="makan"
+              id="teaser-makan"
             >
               <div class="relative aspect-[4/3] overflow-hidden">
                 <img
@@ -427,14 +429,13 @@
                   >
                   <a
                     class="text-primary hover:text-primary-container font-label-lg text-label-lg flex items-center gap-1"
-                    href="#reservation-modal"
-                    onclick="openModal('makan'); return false;"
+                    href="#makan"
                   >
-                    <span>Reservasi Restoran</span>
+                    <span>Lihat Menu Lengkap</span>
                     <span
                       class="material-symbols-outlined text-[16px]"
-                      data-icon="arrow_outward"
-                      >arrow_outward</span
+                      data-icon="arrow_forward"
+                      >arrow_forward</span
                     >
                   </a>
                 </div>
@@ -545,21 +546,32 @@
         id="menginap"
       >
         <div class="max-w-7xl mx-auto px-gutter-mobile md:px-gutter">
-          <div class="max-w-2xl mb-12">
-            <span
-              class="font-label-sm text-label-sm uppercase tracking-wider text-secondary"
-              >Pilihan Penginapan</span
-            >
-            <h2
-              class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-1"
-            >
-              Kabin Kayu Alami Tepi Sawah
-            </h2>
-            <p class="font-body-lg text-body-lg text-on-surface-variant mt-3">
-              Dirancang dari kayu alami dengan bukaan kaca lebar menghadap
-              langsung ke hamparan sawah hijau. Hening di malam hari, sejuk di
-              pagi hari.
-            </p>
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div class="max-w-2xl">
+              <span
+                class="font-label-sm text-label-sm uppercase tracking-wider text-secondary"
+                >Pilihan Penginapan</span
+              >
+              <h2
+                class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-1"
+              >
+                Kabin Kayu Alami Tepi Sawah
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant mt-3">
+                Dirancang dari kayu alami dengan bukaan kaca lebar menghadap
+                langsung ke hamparan sawah hijau. Hening di malam hari, sejuk di
+                pagi hari.
+              </p>
+            </div>
+            <div class="mt-4 md:mt-0 flex-shrink-0">
+              <button
+                onclick="openCatalogModal(1)"
+                class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface-container-lowest border border-outline-variant/60 text-secondary hover:text-primary font-label-sm text-label-sm shadow-xs hover:shadow-sm transition-all"
+              >
+                <span class="material-symbols-outlined text-[18px]">photo_library</span>
+                <span>Buka Brosur Resmi (2 Halaman)</span>
+              </button>
+            </div>
           </div>
           <div
             class="mb-10 rounded-2xl border border-outline-variant/50 bg-surface-container-lowest p-5 md:p-6"
@@ -932,7 +944,161 @@
           </div>
         </div>
       </section>
-      <!-- 6. Facilities Section (9 Authentic Facilities Grid) -->
+      <!-- 6. Dining & Restaurant Section ("Santap di Sawah") -->
+      <section class="py-20 md:py-28 bg-surface-container-low border-t border-outline-variant/40" id="makan">
+        <div class="max-w-7xl mx-auto px-gutter-mobile md:px-gutter">
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div class="max-w-2xl">
+              <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Kuliner Sunda Otentik</span>
+              <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-1">
+                Santap Liwet Tampah di Tengah Sawah
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant mt-3">
+                Restoran lesehan terbuka dengan saung-saung di tepi pematang sawah berlatar perbukitan. Semua hidangan dimasak tradisional dengan bumbu rempah segar dan aroma wangi khas kayu bakar.
+              </p>
+            </div>
+            <div class="mt-4 md:mt-0 flex flex-wrap items-center gap-2 sm:gap-3">
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest border border-outline-variant/50 text-secondary font-label-sm text-label-sm shadow-xs">
+                <span class="material-symbols-outlined text-[16px]">schedule</span>
+                Buka: 09:00 – 19:00 WIB
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">
+                <span class="material-symbols-outlined text-[16px]">check_circle</span>
+                Terbuka untuk Umum
+              </span>
+            </div>
+          </div>
+
+          <!-- Culinary Highlights Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <!-- Menu Card 1: Nasi Liwet Kastrol -->
+            <div class="bg-surface-container-lowest border border-outline-variant/50 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-primary/40 transition-colors shadow-xs">
+              <div class="relative aspect-[16/10] overflow-hidden">
+                <img
+                  alt="Paket Nasi Liwet Kastrol Komplit"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  src="https://lh3.googleusercontent.com/aida/AEtjO1XuqKgTu_UYi4s76JwQiRohWV3OnmufZdJTuzp2RcoKhM_AOQEkGzwuYfALKrhvNxPJ7KqgBKeM0kPMZcmMFqjW0JMFO-r6BzHjO_6g7oBfhVJo5yryNnBWJA8zGkwJ9D-oJl1dVzW3Rio0vjgq4IJSmUw_-_4l97Fl01g_BWDzz1U3XT6tMu5-NokXpJ1FBb1FJdAyRJPYbyiCC2jhVPrTzHnnvoFzxGUYy9eUfoKDQELa1sSY-xa6E0Eu"
+                />
+                <span class="absolute top-3 left-3 bg-surface/90 text-primary font-label-sm text-label-sm px-2.5 py-0.5 rounded-full backdrop-blur-sm">Menu Andalan Sawah</span>
+              </div>
+              <div class="p-6 flex flex-col justify-between flex-grow">
+                <div>
+                  <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Paket Nasi Liwet Kastrol Komplit</h3>
+                  <p class="text-on-surface-variant font-body-md leading-relaxed text-sm">
+                    Nasi liwet wangi rempah dengan taburan teri medan gurih &amp; pete, disajikan bersama ayam goreng lengkuas, tahu tempe, lalapan segar kemangi, dan sambal dadak ulek terasi batu.
+                  </p>
+                  <div class="mt-4 flex flex-wrap gap-1.5 text-caption font-caption text-on-surface-variant">
+                    <span class="bg-surface-container px-2 py-1 rounded">Porsi 2 – 4 Orang</span>
+                    <span class="bg-surface-container px-2 py-1 rounded">Kastrol Tradisional</span>
+                    <span class="bg-surface-container px-2 py-1 rounded">Sambal Dadak</span>
+                  </div>
+                </div>
+                <div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center justify-between">
+                  <span class="font-label-sm text-label-sm text-secondary font-medium">Bisa Lesehan di Saung</span>
+                  <button onclick="openModal('makan')" class="text-primary hover:text-primary-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+                    <span>Pesan Meja</span>
+                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Menu Card 2: Gurame & Nila Bakar -->
+            <div class="bg-surface-container-lowest border border-outline-variant/50 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-primary/40 transition-colors shadow-xs">
+              <div class="relative aspect-[16/10] overflow-hidden">
+                <img
+                  alt="Ikan Gurame dan Nila Bakar Saung Sawah"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnPv4mvXqB5E1in7b_uANK-fhJlT5uNRJIdcGt5cBaIdRAFjnJejjErQVl0CcMEpBbuHkKcWfMG0NVhOKDpKEtEo9G5xVurUo5TYEFYSi2mQpoG-PasrlP1CFpOppdZ0PMkWxZThoABwm_WBPgTqBo9IYyoyGzMUdg-pZUoN-HRHdWVx08WxMMe1xBk19nhFz8-8050lwsXwbAiWaaH4zT67pq6v9OZWDieMTNiYYHJ1bFTWE2WplQiA"
+                />
+                <span class="absolute top-3 left-3 bg-surface/90 text-primary font-label-sm text-label-sm px-2.5 py-0.5 rounded-full backdrop-blur-sm">Olahan Ikan Segar</span>
+              </div>
+              <div class="p-6 flex flex-col justify-between flex-grow">
+                <div>
+                  <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Gurame &amp; Nila Bakar Madu</h3>
+                  <p class="text-on-surface-variant font-body-md leading-relaxed text-sm">
+                    Ikan segar langsung dari kolam air mengalir pegunungan, dibakar di atas arang kayu dengan lumuran bumbu kecap madu rempah gurih manis, renyah di luar dan lembut di dalam.
+                  </p>
+                  <div class="mt-4 flex flex-wrap gap-1.5 text-caption font-caption text-on-surface-variant">
+                    <span class="bg-surface-container px-2 py-1 rounded">Ikan Segar Kolam</span>
+                    <span class="bg-surface-container px-2 py-1 rounded">Bakar / Goreng</span>
+                    <span class="bg-surface-container px-2 py-1 rounded">Sayur Asem Segar</span>
+                  </div>
+                </div>
+                <div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center justify-between">
+                  <span class="font-label-sm text-label-sm text-secondary font-medium">Bakar Arang Tradisional</span>
+                  <button onclick="openModal('makan')" class="text-primary hover:text-primary-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+                    <span>Pesan Meja</span>
+                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Menu Card 3: Kopi & Camilan Sawah -->
+            <div class="bg-surface-container-lowest border border-outline-variant/50 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-primary/40 transition-colors shadow-xs">
+              <div class="relative aspect-[16/10] overflow-hidden">
+                <img
+                  alt="Kopi Sawah dan Camilan Tradisional"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3xCGlfg5X_Sg6SJGvF5kOWQ3hg8nnjqE_xUozUsEH_INObeemlayj3zlOS54xpn0jF6djMH9R10d0alIzCaim5va5e78ek7drR91_jHgtvHicFpFFs46qpbhSOax8NwddEqCTaislqXevw-jn-lsf89KWnBzY75_sAUfkXOEY8o4uEzVzyhgN4nwL8vntuQmzFOMRNQPMaBTKVtBnX51QTaVX7k6NQuAy57Dfs57F080pihRG9576NA"
+                />
+                <span class="absolute top-3 left-3 bg-surface/90 text-primary font-label-sm text-label-sm px-2.5 py-0.5 rounded-full backdrop-blur-sm">Ngopi &amp; Camilan</span>
+              </div>
+              <div class="p-6 flex flex-col justify-between flex-grow">
+                <div>
+                  <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Kopi Sawah &amp; Gorengan Desa</h3>
+                  <p class="text-on-surface-variant font-body-md leading-relaxed text-sm">
+                    Rehat sore ditemani secangkir seduhan kopi robusta lokal Sukabumi hangat, kelapa muda murni, pisang goreng renyah tabur gula aren, cireng bumbu rujak, dan aneka minuman herbal.
+                  </p>
+                  <div class="mt-4 flex flex-wrap gap-1.5 text-caption font-caption text-on-surface-variant">
+                    <span class="bg-surface-container px-2 py-1 rounded">Kopi Lokal Sukabumi</span>
+                    <span class="bg-surface-container px-2 py-1 rounded">Kelapa Muda Asli</span>
+                    <span class="bg-surface-container px-2 py-1 rounded">Pisang Goreng Aren</span>
+                  </div>
+                </div>
+                <div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center justify-between">
+                  <span class="font-label-sm text-label-sm text-secondary font-medium">Cocok untuk Sore Hari</span>
+                  <button onclick="openModal('makan')" class="text-primary hover:text-primary-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+                    <span>Pesan Meja</span>
+                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dining Experience Banner / CTA -->
+          <div class="rounded-2xl bg-surface-container border border-outline-variant/50 p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs">
+            <div class="space-y-1">
+              <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Rombongan &amp; Acara Makan Bersama</span>
+              <h3 class="font-headline-sm text-headline-sm text-primary">Ingin Reservasi Saung atau Paket Rombongan?</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Tersedia saung lesehan berkapasitas 5 hingga 50 orang untuk arisan, kumpul keluarga, maupun makan siang bersama rekan kerja.
+              </p>
+            </div>
+            <div class="flex flex-wrap items-center gap-3 w-full md:w-auto flex-shrink-0">
+              <button
+                onclick="openModal('makan')"
+                class="bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg px-6 py-3 rounded-full transition-all active:scale-[0.98] shadow-sm flex items-center justify-center gap-2 w-full sm:w-auto"
+              >
+                <span class="material-symbols-outlined text-[18px]">restaurant</span>
+                <span>Reservasi Meja Resto</span>
+              </button>
+              <a
+                href="https://wa.me/6281228171970?text=Halo%20Ngadem%20di%20Sawah,%20saya%20ingin%20menanyakan%20menu%20dan%20reservasi%20makan%20untuk%20rombongan."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="border border-secondary text-secondary hover:bg-secondary/10 font-label-lg text-label-lg px-6 py-3 rounded-full transition-all active:scale-[0.98] flex items-center justify-center gap-2 w-full sm:w-auto"
+              >
+                <span class="material-symbols-outlined text-[18px]">chat</span>
+                <span>Chat Admin Resto</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 7. Facilities Section -->
       <section class="py-20 md:py-28" id="fasilitas">
         <div class="max-w-7xl mx-auto px-gutter-mobile md:px-gutter">
           <div class="text-center max-w-2xl mx-auto mb-16">
@@ -2309,6 +2475,98 @@
               <span class="material-symbols-outlined text-[16px]" data-icon="chat">chat</span>
             </a>
           </div>
+        </div>
+      </div>
+    <!-- 13. E-Catalog / Official Brochure Modal -->
+    <div
+      class="modal-overlay fixed inset-0 z-50 bg-on-surface/60 backdrop-blur-sm hidden items-center justify-center p-3 sm:p-6 overflow-y-auto"
+      id="catalog-modal"
+    >
+      <div
+        class="bg-surface-container-lowest max-w-4xl w-full rounded-3xl border border-outline-variant/60 shadow-2xl overflow-hidden flex flex-col max-h-[92vh]"
+      >
+        <!-- Modal Header -->
+        <div
+          class="p-4 sm:p-6 border-b border-outline-variant/30 flex items-center justify-between bg-surface-container-low flex-shrink-0"
+        >
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm">Brosur Resmi</span>
+              <span class="font-caption text-caption text-secondary font-medium">Ngadem di Sawah</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-primary mt-1">E-Katalog &amp; Daftar Harga</h3>
+          </div>
+          <button
+            class="w-9 h-9 rounded-full bg-surface-container-lowest border border-outline-variant/50 flex items-center justify-center text-primary hover:bg-surface-container transition-colors"
+            onclick="closeCatalogModal()"
+          >
+            <span class="material-symbols-outlined text-[20px]" data-icon="close">close</span>
+          </button>
+        </div>
+
+        <!-- Page Selector Tabs -->
+        <div
+          class="px-4 sm:px-6 py-3 bg-surface-container-lowest flex items-center justify-between border-b border-outline-variant/30 flex-wrap gap-3 flex-shrink-0"
+        >
+          <div class="inline-flex p-1 bg-surface-container rounded-full text-label-sm font-label-sm">
+            <button
+              id="catalog-tab-1"
+              onclick="switchCatalogPage(1)"
+              class="px-3 sm:px-4 py-1.5 rounded-full font-semibold bg-surface-container-lowest text-primary shadow-xs transition-all"
+            >
+              Halaman 1: Kamar &amp; Pricelist
+            </button>
+            <button
+              id="catalog-tab-2"
+              onclick="switchCatalogPage(2)"
+              class="px-3 sm:px-4 py-1.5 rounded-full font-medium text-on-surface-variant hover:text-primary transition-all"
+            >
+              Halaman 2: Fasilitas &amp; Suasana
+            </button>
+          </div>
+          <a
+            id="catalog-download-link"
+            href="assets/katalog_ngadem_di_sawah_1.jpg"
+            download="Katalog_Ngadem_di_Sawah_Hal1.jpg"
+            class="inline-flex items-center gap-1.5 text-secondary hover:text-primary font-label-sm text-label-sm border border-outline-variant/60 rounded-full px-3 py-1.5 hover:bg-surface-container transition-colors"
+          >
+            <span class="material-symbols-outlined text-[16px]" data-icon="download">download</span>
+            <span>Unduh Brosur</span>
+          </a>
+        </div>
+
+        <!-- Scrollable Image Preview Area -->
+        <div class="p-4 sm:p-6 overflow-y-auto custom-scroll bg-surface-container-low/40 flex flex-col items-center flex-grow">
+          <div id="catalog-page-1" class="w-full max-w-2xl flex flex-col items-center">
+            <img
+              src="assets/katalog_ngadem_di_sawah_1.jpg"
+              alt="Katalog Ngadem di Sawah Halaman 1 - Tipe Kamar Classic, Estetik 1, 2"
+              class="w-full rounded-2xl shadow-md border border-outline-variant/40 object-contain"
+            />
+          </div>
+          <div id="catalog-page-2" class="w-full max-w-2xl hidden flex flex-col items-center">
+            <img
+              src="assets/katalog_ngadem_di_sawah_2.jpg"
+              alt="Katalog Ngadem di Sawah Halaman 2 - Estetik 3 dan 10 Fasilitas Lengkap"
+              class="w-full rounded-2xl shadow-md border border-outline-variant/40 object-contain"
+            />
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div
+          class="p-4 sm:p-5 border-t border-outline-variant/30 bg-surface-container-low flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 flex-shrink-0"
+        >
+          <div class="text-caption font-caption text-on-surface-variant">
+            Kontak Admin Resmi: <strong>+62 812-2817-1970</strong> · IG: <strong>@ngademdisawah</strong>
+          </div>
+          <button
+            onclick="closeCatalogModal(); openModal('menginap');"
+            class="bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm py-2 px-5 rounded-full transition-all flex items-center justify-center gap-1.5 shadow-sm"
+          >
+            <span>Reservasi via WhatsApp</span>
+            <span class="material-symbols-outlined text-[16px]" data-icon="chat">chat</span>
+          </button>
         </div>
       </div>
     </div>

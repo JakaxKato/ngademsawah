@@ -199,9 +199,66 @@ function copyAddress() {
   });
 }
 
+function openCatalogModal(page = 1) {
+  const modal = document.getElementById("catalog-modal");
+  if (!modal) return;
+  modal.classList.remove("hidden");
+  modal.classList.add("flex");
+  switchCatalogPage(page);
+  document.body.style.overflow = "hidden";
+}
+
+function closeCatalogModal() {
+  const modal = document.getElementById("catalog-modal");
+  if (!modal) return;
+  modal.classList.add("hidden");
+  modal.classList.remove("flex");
+  document.body.style.overflow = "auto";
+}
+
+function switchCatalogPage(page) {
+  const p1 = document.getElementById("catalog-page-1");
+  const p2 = document.getElementById("catalog-page-2");
+  const tab1 = document.getElementById("catalog-tab-1");
+  const tab2 = document.getElementById("catalog-tab-2");
+  const downloadLink = document.getElementById("catalog-download-link");
+
+  if (!p1 || !p2) return;
+
+  if (page === 1) {
+    p1.classList.remove("hidden");
+    p2.classList.add("hidden");
+    if (tab1)
+      tab1.className =
+        "px-4 py-1.5 rounded-full font-semibold bg-surface-container-lowest text-primary shadow-xs transition-all";
+    if (tab2)
+      tab2.className =
+        "px-4 py-1.5 rounded-full font-medium text-on-surface-variant hover:text-primary transition-all";
+    if (downloadLink) {
+      downloadLink.href = "assets/katalog_ngadem_di_sawah_1.jpg";
+      downloadLink.download = "Katalog_Ngadem_di_Sawah_Hal1.jpg";
+    }
+  } else {
+    p1.classList.add("hidden");
+    p2.classList.remove("hidden");
+    if (tab1)
+      tab1.className =
+        "px-4 py-1.5 rounded-full font-medium text-on-surface-variant hover:text-primary transition-all";
+    if (tab2)
+      tab2.className =
+        "px-4 py-1.5 rounded-full font-semibold bg-surface-container-lowest text-primary shadow-xs transition-all";
+    if (downloadLink) {
+      downloadLink.href = "assets/katalog_ngadem_di_sawah_2.jpg";
+      downloadLink.download = "Katalog_Ngadem_di_Sawah_Hal2.jpg";
+    }
+  }
+}
+
 window.addEventListener("click", (event) => {
   if (event.target === document.getElementById("reservation-modal"))
     closeModal();
   if (event.target === document.getElementById("room-detail-modal"))
     closeRoomDetailModal();
+  if (event.target === document.getElementById("catalog-modal"))
+    closeCatalogModal();
 });
