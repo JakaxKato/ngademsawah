@@ -8,7 +8,7 @@ const roomData = {
     desc: "Kabin berarsitektur lumbung modern dua lantai (mezzanine) berbahan kayu jati dan batuan alam. Menghadap langsung ke pematang sawah dan view kolam renang dengan bukaan kaca panorama luas, sejuk dan lapang untuk keluarga.",
     weekday: "Rp1.000.000",
     weekend: "Rp1.300.000",
-    img: "https://lh3.googleusercontent.com/aida/AEtjO1UBdcQjiVl1tbZ9BZNDPX-uxDGvLIYV0mfJotM5ywjiWzIJvG-kAPKHsQt8l6FFnr9zCySg1lWgxz0rj1ih-e2bJYgbw3Ozu0EZ8jEZL5Cl-VfUrPovaqcE-34Y6RVm-J4VDrwChbZtU9PgccfGTvm_QMIWUIgUakPj5BYgKH3PbCjnnr-Y_AzdYHeZqlsFPMR1aQuJ8owX-9ni5JOak2KG9IHEwb9nJIyt9XtIL7_l1jqRWSRd7SUpwrSK",
+    img: "assets/kabin-interior.jpg",
     amenities: [
       { icon: "restaurant", text: "Breakfast untuk 4 orang" },
       { icon: "ac_unit", text: "Tersedia AC dan Water Heater" },
@@ -26,7 +26,7 @@ const roomData = {
     desc: "Kabin kayu berdesain silinder unik dengan nuansa kayu hangat dan dinding batu alam. Dilengkapi tempat tidur empuk, sofa santai, akses langsung ke area kolam renang dan pematang sawah yang asri.",
     weekday: "Rp800.000",
     weekend: "Rp1.000.000",
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAyc-B3jR_S65orN_fIYt7fd0pw4MHENulyGwGmOEuj4ggGcEzpfLoDsFgIcuYIH5Lrrit5haqnZFsrFSUeLhuzrJJxFN2UrHbJFiCkl8NTMFuPsSx5ZT-vzEriDjVW488-ub9U5ddOvRcP5pjvTX3-tF069h2DzpLxU5cGZ0aBxZ5rfZLapkvgO_lkKtD_e6odmsgENS4M_5ddCa0gLQZxya6K50tvL7rEKxCxOw_TjbgiKX8u-Bv_PQ",
+    img: "assets/kabin-interior.jpg",
     amenities: [
       { icon: "restaurant", text: "Breakfast untuk 2 orang" },
       { icon: "ac_unit", text: "Tersedia AC dan Water Heater" },
@@ -44,7 +44,7 @@ const roomData = {
     desc: "Kabin lumbung kayu pod yang intim dan tenang. Sangat pas untuk pasangan atau keluarga kecil dengan sudut teras santai menghadap hamparan hijau sawah dan pemandangan Gunung Salak.",
     weekday: "Rp600.000",
     weekend: "Rp800.000",
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuB3xCGlfg5X_Sg6SJGvF5kOWQ3hg8nnjqE_xUozUsEH_INObeemlayj3zlOS54xpn0jF6djMH9R10d0alIzCaim5va5e78ek7drR91_jHgtvHicFpFFs46qpbhSOax8NwddEqCTaislqXevw-jn-lsf89KWnBzY75_sAUfkXOEY8o4uEzVzyhgN4nwL8vntuQmzFOMRNQPMaBTKVtBnX51QTaVX7k6NQuAy57Dfs57F080pihRG9576NA",
+    img: "assets/kabin-sawah.jpg",
     amenities: [
       { icon: "restaurant", text: "Breakfast untuk 2 orang" },
       { icon: "ac_unit", text: "Tersedia AC dan Water Heater" },
@@ -62,7 +62,7 @@ const roomData = {
     desc: "Pilihan kamar kayu sederhana yang sejuk dan damai dengan pemandangan langsung ke halaman rumput hijau retreat. Dilengkapi kamar mandi sharing yang bersih terawat, ideal untuk istirahat ramah kantong.",
     weekday: "Rp300.000",
     weekend: "Rp350.000",
-    img: "https://lh3.googleusercontent.com/aida/AEtjO1UIp4vom51ymfhl4-cRrouLZatwUKlYAmhaVGqwro2uODepARgBvp6ZJCFwMq8cBwUq82wv2ShLU912MfaXRuDoyB2EaTvYTTjjNC-5aP69V3tupvQ_0HcCW4uIo4jBpQgIUET5837wPQa9vwQ11pViwP_1V1uk-dK8CM9YemZ8Lc_XXgoOmRB9slczdklNHtv8mTpCov7036fIHPnm1yDvhZ2v7J6zA9N2-1Xj9ftwGy63jGOX878wspRZ",
+    img: "assets/kabin-interior.jpg",
     amenities: [
       { icon: "restaurant", text: "Breakfast untuk 2 orang" },
       { icon: "wash", text: "Kamar mandi sharing (luar)" },
