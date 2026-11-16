@@ -11,6 +11,8 @@ npm run build
 
 Buka `index.html` untuk melihat hasil. `npm run dev` memantau perubahan CSS pada `src/input.css` dan membangun ulang `styles.css`.
 
+`node_modules/` tidak disimpan di Git. Vercel akan memasang dependency dari `package-lock.json` saat membangun situs.
+
 ## Alur reservasi
 
 - Harga kamar yang tampil di HTML disalin dari poster `assets/listharga_*.jpg` sebagai harga acuan.
