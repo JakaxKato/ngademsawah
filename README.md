@@ -9,9 +9,9 @@ npm install
 npm run build
 ```
 
-Buka `index.html` untuk melihat hasil. `npm run dev` memantau perubahan CSS pada `src/input.css` dan membangun ulang `styles.css`.
+Buka `index.html` untuk melihat hasil lokal. `npm run dev` memantau perubahan CSS pada `src/input.css` dan membangun ulang `styles.css`.
 
-`node_modules/` tidak disimpan di Git. Vercel akan memasang dependency dari `package-lock.json` saat membangun situs.
+`npm run build` menghasilkan folder `public/` untuk Vercel. Build hanya menyalin HTML, CSS, JavaScript, favicon, dan foto/poster yang dipakai situs. Folder `public/` dan `node_modules/` tidak disimpan di Git. Vercel memasang dependency dari `package-lock.json` saat membangun situs.
 
 ## Alur reservasi
 

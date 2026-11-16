@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "node ./node_modules/tailwindcss/lib/cli.js -i ./src/input.css -o ./styles.css --minify",
+    "build": "node ./scripts/build.js",
     "dev": "node ./node_modules/tailwindcss/lib/cli.js -i ./src/input.css -o ./styles.css --watch"
   },
   "devDependencies": {
