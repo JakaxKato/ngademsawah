@@ -1,0 +1,12 @@
+node_modules/
+.vercel/
+public/
+.env
+.env.*
+!.env.example
+.npmrc
+*.pem
+*.key
+*.p12
+*.pfx
+npm-debug.log*
